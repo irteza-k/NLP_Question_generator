@@ -1,0 +1,708 @@
+"What will be the output of the following code  :                  #include <stdio.h>
+
+struct MyStructure {
+    int myInt;
+    float myFloat;
+    char myChar;
+};
+
+int main() {
+    struct MyStructure example;
+    example.myInt = 10;
+    example.myFloat = 3.14;
+    example.myChar = 'A';
+
+    printf(""MyInt: %d\n"", example.myInt);
+    printf(""MyFloat: %.2f\n"", example.myFloat);
+    printf(""MyChar: %c\n"", example.myChar);
+
+    return 0;
+}"
+"What will be the output of the following code  : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    example.result = round(acos(0.55));
+
+    printf(""Result: %.0f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code  : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    example.result = asin(-1.0);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :  #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    example.result = ceil(-5.9);
+
+    printf(""Result: %.1f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    example.result = copysign(2, -3);
+
+    printf(""Result: %.1f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    example.result = cos(3.14159265359);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    int data[] = {1, 2, 3, 4, 5};
+    int size = sizeof(data) / sizeof(data[0]);
+    double groupedMedian;
+
+    // Calculate the grouped median
+    if (size % 2 == 0) {
+        groupedMedian = (data[size / 2 - 1] + data[size / 2]) / 2.0;
+    } else {
+        groupedMedian = data[size / 2];
+    }
+
+    // Round the grouped median
+    example.result = round(groupedMedian);
+
+    printf(""Result: %.0f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :  #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    int data[] = {1, 2, 3, 4, 5};
+    int size = sizeof(data) / sizeof(data[0]);
+    double groupedMedian;
+
+    // Calculate the grouped median
+    if (size % 2 == 0) {
+        groupedMedian = (data[size / 2 - 1] + data[size / 2]) / 2.0;
+    } else {
+        groupedMedian = data[size / 2];
+    }
+
+    // Round the grouped median
+    example.result = round(groupedMedian);
+
+    printf(""Result: %.0f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :   #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.45;
+
+    // Calculate the hyperbolic arccosine and round the result
+    example.result = round(acosh(value));
+
+    printf(""Result: %.0f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :   #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 5.345;
+
+    // Calculate the arctangent
+    example.result = atan(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :  #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double y = 0.345;
+    double x = 1.0;
+
+    // Calculate the arctangent with two arguments
+    example.result = atan2(y, x);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :  #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the cosine
+    example.result = cos(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the hyperbolic cosine
+    example.result = cosh(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Check if the input value is within the valid range
+    if (value >= -1 && value <= 1) {
+        // Calculate the inverse hyperbolic tangent
+        example.result = atanh(value);
+    } else {
+        printf(""Invalid input value. Input must be between -1 and 1.\n"");
+        return 1;  // Exit the program with an error code
+    }
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double radians = 2.345;
+
+    // Convert radians to degrees
+    example.result = radians * (180.0 / M_PI);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+double calculateDistance(double x1, double y1, double x2, double y2) {
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+    double distance = sqrt(dx * dx + dy * dy);
+    return distance;
+}
+
+int main() {
+    struct MyStructure example;
+    double x1 = 2.345;
+    double y1 = -12.442;
+    double x2 = 0;
+    double y2 = 0;
+
+    // Calculate the distance between two points
+    example.result = calculateDistance(x1, y1, x2, y2);
+
+    printf(""Distance: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the error function value
+    example.result = erf(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the complementary error function value
+    example.result = erfc(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the exponential value
+    example.result = exp(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the exponential minus one value
+    example.result = expm1(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Calculate the absolute value
+    example.result = fabs(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 2.345;
+
+    // Round down the value
+    example.result = floor(value);
+
+    printf(""Result: %.0f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double dividend = 8.213;
+    double divisor = 2.345;
+
+    // Calculate the remainder
+    example.result = fmod(dividend, divisor);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double mantissa;
+    int exponent;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Decompose the value into mantissa and exponent
+    example.mantissa = frexp(value, &(example.exponent));
+
+    printf(""Mantissa: %.15f\n"", example.mantissa);
+    printf(""Exponent: %d\n"", example.exponent);
+
+    return 0;
+}"
+"What will be the output of the following code : 
+#include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double values[] = {1.2, 3.768, 0.232, 8.213, 2.345};
+    int numValues = sizeof(values) / sizeof(values[0]);
+
+    // Calculate the sum of the values
+    example.result = 0.0;
+    for (int i = 0; i < numValues; i++) {
+        example.result += values[i];
+    }
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the gamma function value
+    example.result = tgamma(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double side1 = 8.213;
+    double side2 = 2.345;
+
+    // Calculate the hypotenuse length
+    example.result = hypot(side1, side2);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :   #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    int result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value1 = 8.213;
+    double value2 = 2.345;
+
+    // Check if the values are close within a relative or absolute tolerance
+    example.result = fabs(value1 - value2) <= 1e-09 * fmax(fabs(value1), fabs(value2));
+
+    printf(""Result: %s\n"", example.result ? ""True"" : ""False"");
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the natural logarithm of the absolute value of the gamma function
+    example.result = lgamma(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the base-10 logarithm
+    example.result = log10(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the natural logarithm of (1 + x)
+    example.result = log1p(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the base-2 logarithm
+    example.result = log2(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+double calculateProduct(double values[], int numValues) {
+    double product = 1.0;
+    for (int i = 0; i < numValues; i++) {
+        product *= values[i];
+    }
+    return product;
+}
+
+int main() {
+    struct MyStructure example;
+    double values[] = {1.224, 6.24234, -2.32434, 8.213};
+    int numValues = sizeof(values) / sizeof(values[0]);
+
+    // Calculate the product of the values
+    example.result = calculateProduct(values, numValues);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double degrees = 8.213;
+
+    // Convert degrees to radians
+    example.result = degrees * (M_PI / 180.0);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double dividend = 8.213;
+    double divisor = 3.111;
+
+    // Calculate the remainder
+    example.result = remainder(dividend, divisor);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    int result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Truncate the decimal part and obtain the integer part
+    example.result = (int)value;
+
+    printf(""Result: %d\n"", example.result);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <math.h>
+
+struct MyStructure {
+    double result;
+};
+
+int main() {
+    struct MyStructure example;
+    double value = 8.213;
+
+    // Calculate the exponential value
+    example.result = exp(value);
+
+    printf(""Result: %.15f\n"", example.result);
+
+    return 0;
+}"

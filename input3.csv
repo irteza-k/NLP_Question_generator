@@ -1,0 +1,494 @@
+"What will be the output of the following code :   #include <stdio.h>
+
+struct List {
+    int elements[5];
+    int length;
+};
+
+int main() {
+    struct List list1;
+    int i;
+
+    // Initialize the elements of the list
+    list1.elements[0] = 1;
+    list1.elements[1] = 2;
+    list1.elements[2] = 3;
+    list1.elements[3] = 4;
+    list1.elements[4] = 5;
+
+    // Calculate the length of the list
+    list1.length = sizeof(list1.elements) / sizeof(list1.elements[0]);
+
+    // Print the length of the list
+    printf(""%d\n"", list1.length);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct List {
+    char elements[10][100];
+    int length;
+};
+
+int main() {
+    struct List {
+        char elements[10][100];
+        int length;
+    };
+
+    struct List list1;
+    int i;
+
+    // Initialize the list length
+    list1.length = 0;
+
+    // Append ""apple"" to the list
+    strcpy(list1.elements[list1.length], ""apple"");
+    list1.length++;
+
+    // Print the elements of the list
+    for (i = 0; i < list1.length; i++) {
+        printf(""%s\n"", list1.elements[i]);
+    }
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct List {
+    char elements[10][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == 10) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    for (int i = list->length; i > index; i--) {
+        strcpy(list->elements[i], list->elements[i - 1]);
+    }
+
+    strcpy(list->elements[index], element);
+    list->length++;
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == 10) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+void printList(struct List *list) {
+    for (int i = 0; i < list->length; i++) {
+        printf(""%s\n"", list->elements[i]);
+    }
+}
+
+int main() {
+    struct List list1;
+    list1.length = 0;
+
+    insertElement(&list1, 1, ""dear"");
+    appendElement(&list1, ""python"");
+    printList(&list1);
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 10
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+void printList(struct List *list) {
+    for (int i = 0; i < list->length; i++) {
+        printf(""%s\n"", list->elements[i]);
+    }
+}
+
+int main() {
+    struct List list1;
+    list1.length = 0;
+
+    insertElement(&list1, 0, ""dear"");  // Insert at the beginning
+    appendElement(&list1, ""python"");
+    insertElement(&list1, 0, ""dear"");  // Insert at the beginning
+    appendElement(&list1, ""java"");
+    printList(&list1);
+
+    return 0;
+}"
+"What will be the output of the following code :  #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 10
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+char* getElement(struct List *list, int index) {
+    if (index < 0 || index >= list->length) {
+        printf(""Invalid index.\n"");
+        return NULL;
+    }
+
+    return list->elements[index];
+}
+
+int main() {
+    struct List list1;
+    list1.length = 0;
+
+    insertElement(&list1, 1, ""dear"");
+    appendElement(&list1, ""python"");
+    insertElement(&list1, 0, ""dear"");
+    appendElement(&list1, ""java"");
+
+    // Accessing last element using index -1 equivalent in Python
+    printf(""%s\n"", getElement(&list1, list1.length - 1));
+
+    return 0;
+}"
+"What will be the output of the following code : #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 10
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+int main() {
+    struct List list1;
+    list1.length = 0;
+
+    insertElement(&list1, 1, ""dear"");
+    appendElement(&list1, ""python"");
+    insertElement(&list1, list1.length, ""dear""); // Append at the end
+    appendElement(&list1, ""java"");
+
+    // Calculate the length of the list
+    int listLength = list1.length;
+    printf(""%d\n"", listLength);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 10
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void clearList(struct List *list) {
+    list->length = 0;
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+int main() {
+    struct List list1;
+    list1.length = 0;
+
+    insertElement(&list1, 0, ""dear"");  // Insert at the beginning
+    clearList(&list1);  // Clear the list
+    appendElement(&list1, ""java"");  // Append an element
+    int listLength = list1.length;  // Calculate the length of the list
+    printf(""%d\n"", listLength);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 10
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void clearList(struct List *list) {
+    list->length = 0;
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+int main() {
+    struct List list1;
+    struct List list2;
+
+    list1.length = 0;
+    list2.length = 0;
+
+    insertElement(&list1, 0, ""dear"");  // Insert at the beginning
+    clearList(&list1);  // Clear the list
+    appendElement(&list1, ""java"");  // Append an element
+
+    list2 = list1;  // Copy list1 to list2
+
+    // Calculate the length of the combined list (list1 + list2)
+    int combinedLength = list1.length + list2.length;
+    printf(""%d\n"", combinedLength);
+
+    return 0;
+}"
+"What will be the output of the following code :#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_LENGTH 20
+
+struct List {
+    char elements[MAX_LENGTH][100];
+    int length;
+};
+
+void insertElement(struct List *list, int index, const char *element) {
+    if (index < 0 || index > list->length || list->length == MAX_LENGTH) {
+        printf(""Invalid index or list is full.\n"");
+        return;
+    }
+
+    if (list->length < MAX_LENGTH) {
+        for (int i = list->length; i > index; i--) {
+            strcpy(list->elements[i], list->elements[i - 1]);
+        }
+
+        strcpy(list->elements[index], element);
+        list->length++;
+    } else {
+        printf(""List is full. Cannot insert element.\n"");
+    }
+}
+
+void clearList(struct List *list) {
+    list->length = 0;
+}
+
+void appendElement(struct List *list, const char *element) {
+    if (list->length == MAX_LENGTH) {
+        printf(""List is full. Cannot append element.\n"");
+        return;
+    }
+
+    strcpy(list->elements[list->length], element);
+    list->length++;
+}
+
+void extendList(struct List *list1, struct List *list2) {
+    if ((list1->length + list2->length) > MAX_LENGTH) {
+        printf(""List cannot be extended. Maximum length exceeded.\n"");
+        return;
+    }
+
+    for (int i = 0; i < list2->length; i++) {
+        strcpy(list1->elements[list1->length], list2->elements[i]);
+        list1->length++;
+    }
+}
+
+void printList(struct List *list) {
+    for (int i = 0; i < list->length; i++) {
+        printf(""%s\n"", list->elements[i]);
+    }
+}
+
+int main() {
+    struct List list1;
+    struct List list2;
+
+    list1.length = 0;
+    list2.length = 0;
+
+    insertElement(&list1, 0, ""dear"");  // Insert at the beginning
+    clearList(&list1);  // Clear the list
+    appendElement(&list1, ""java"");  // Append an element
+
+    // Copy list1 to list2
+    for (int i = 0; i < list1.length; i++) {
+        strcpy(list2.elements[i], list1.elements[i]);
+        list2.length++;
+    }
+
+    extendList(&list1, &list2);  // Extend list1 with list2
+
+    printList(&list1);  // Print the combined list
+
+    return 0;
+}"
+"What will be the output of the following code : #include<stdio.h>
+int main()
+{
+	struct simp 
+	{
+		int i = 6;
+		char city[] = ""chennai"";
+	};
+	struct simp s1;
+	printf(""%d"",s1.city);
+	printf(""%d"", s1.i);
+	return 0;
+}"

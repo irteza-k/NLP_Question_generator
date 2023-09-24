@@ -1,0 +1,607 @@
+
+What is a structure in C language.?
+"What is the size of a C structure.?
+A) C structure is always 128 bytes.
+B) Size of C structure is the total bytes of all elements of structure.
+C) Size of C structure is the size of largest element.
+D) None of the above"
+"What is the output of C program with structures.?
+
+int main()
+{
+    structure hotel
+    {
+        int items;
+        char name[10];
+    }a;
+    strcpy(a.name, ""TAJ"");
+    a.items=10;
+    printf(""%s"", a.name);
+    return 0;
+}
+"
+"What is the output of C program.?
+
+int main()
+{
+    struct book
+    {
+        int pages;
+        char name[10];
+    }a;
+    a.pages=10;
+    strcpy(a.name,""Cbasics"");
+    printf(""%s=%d"", a.name,a.pages);
+    return 0;
+}
+
+A) empty string=10
+B) C=basics
+C) Cbasics=10
+D) Compiler error"
+"Choose a correct statement about C structures.
+A) Structure elements can be initialized at the time of declaration.
+B) Structure members can not be initialized at the time of declaration
+C) Only integer members of structure can be initialized at the time of declaraion
+D) None of the above"
+"Choose a correct statement about C structure.?
+
+int main()
+{
+    struct ship
+    {
+
+    };
+    return 0;
+}
+"
+"What is the output of C program.?
+
+int main()
+{
+    struct ship
+    {
+        int size;
+        char color[10];
+    }boat1, boat2;
+    boat1.size=10;
+    boat2 = boat1;
+    printf(""boat2=%d"",boat2.size);
+    return 0;
+}
+"
+"What is the output of C program with structures.?
+
+int main()
+{
+    struct ship
+    {
+        char color[10];
+    }boat1, boat2;
+    strcpy(boat1.color,""RED"");
+    printf(""%s "",boat1.color);
+    boat2 = boat1;
+    strcpy(boat2.color,""YELLOW"");
+    printf(""%s"",boat1.color);
+    return 0;
+}
+"
+"What is the output of C program with structures.?
+
+int main()
+{
+    struct tree
+    {
+        int h;
+    }
+    struct tree tree1;
+    tree1.h=10;
+    printf(""Height=%d"",tree1.h);
+    return 0;
+}
+"
+"Choose a correct statement about C structure elements.?
+A) Structure elements are stored on random free memory locations
+B) structure elements are stored in register memory locations
+C) structure elements are stored in contiguous memory locations
+D) None of the above."
+"A C Structure or User defined data type is also called.?
+A) Derived data type
+B) Secondary data type
+C) Aggregate data type
+D) All the above"
+"What are the uses of C Structures.?
+A) structure is used to implement Linked Lists, Stack and Queue data structures
+B) Structures are used in Operating System functionality like Display and Input taking.
+C) Structure are used to exchange information with peripherals of PC
+D) All the above"
+"What is the output of C program with structures.?
+
+int main()
+{
+    struct tree
+    {
+        int h;
+        int w;
+    };
+    struct tree tree1={10};
+    printf(""%d "",tree1.w);
+    printf(""%d"",tree1.h);
+    return 0;
+}
+"
+"What is the output of C program with structures.?
+
+int main()
+{
+    struct tree
+    {
+        int h;
+        int rate;
+    };
+    struct tree tree1={0};
+    printf(""%d "",tree1.rate);
+    printf(""%d"",tree1.h);
+    return 0;
+}
+"
+"What is the output of C program.?
+
+int main()
+{
+    struct laptop
+    {
+        int cost;
+        char brand[10];
+    };
+    struct laptop L1={5000,""ACER""};
+    struct laptop L2={6000,""IBM""};
+    printf(""Name=%s"",L1.brand);
+    return 0;
+}
+"
+"
+What is the output of C program with structures pointers.?
+
+int main()
+{
+    struct forest
+    {
+        int trees;
+        int animals;
+    }F1,*F2;
+    F1.trees=1000;
+    F1.animals=20;
+    F2=&F1;
+    printf(""%d "",F2.animals);
+    return 0;
+}
+"
+" What
+
+int main()
+{
+    struct bus
+    {
+        int seats;
+    }F1, *F2;
+    F1.seats=20;
+    F2=&F1;
+    F2->seats=15;
+    printf(""%d "",F1.seats);
+    return 0;
+}
+"
+"What is the output of C program with structure arrays.?
+
+int main()
+{
+    struct pens
+    {
+        int color;
+    }p1[2];
+    struct pens p2[3];
+    p1[0].color=5;
+    p1[1].color=9;
+    printf(""%d "",p1[0].color);
+    printf(""%d"",p1[1].color);
+    return 0;
+}
+"
+"What is the output of C program with structure array pointers.?
+
+int main()
+{
+    struct car
+    {
+        int km;
+    }*p1[2];
+    struct car c1={1234};
+    p1[0]=&c1;
+    printf(""%d "",p1[0]->km);
+    return 0;
+}"
+"Choose a correct statement about C structures.
+A) A structure can contain same structure type member.
+B) A structure size is limited by only physical memory of that PC.
+C) You can define an unlimited number of members inside a structure.
+D) All the above."
+"What is the output of c program with structures.?
+
+int main()
+{
+    struct car
+    {int color;};
+    struct garage
+    {
+        struct car mycar[10];
+    }gar;
+    struct car c1={5};
+    gar.mycar[0]=c1;
+    printf(""%d"",gar.mycar[0]);
+    return 0;
+}"
+"What is the size of the below C structure in TurboC?
+
+int main()
+{
+    struct books{
+        int pages;
+        char str[4];
+    }b;
+    printf(""%d"",sizeof(b));
+    return 0;
+}"
+"What is the output of C program with Structure pointer in TurboC.?
+
+int main()
+{
+    struct books{
+        int pages;
+        char str[4];
+    }*ptr;
+    printf(""%d"",sizeof(ptr));
+    return 0;
+}"
+"In a nested structure definition, with country.state.district statement, memeber state is actually present in the structure.? (COUNTY, STATE, DISTRICT structures)"
+"What is actually passed if you pass a structure variable to a function.?
+A) Copy of structure variable
+B) Reference of structure variable
+C) Starting address of structure variable
+D) Ending address of structure variable"
+"What is the output of C program with structures.?
+
+void show(int,int);
+int main()
+{
+    struct paint{
+        int type;
+        int color;
+    }p;
+    p.type=1;
+    p.color=5;
+    show(p.type,p.color);
+    return 0;
+}
+void show(int a,int b)
+{
+    printf(""%d %d"",a,b);
+}"
+"What is the output of C program with structures.?
+
+int main()
+{
+    struct paint{
+        int type;
+        int color;
+    }p1, p2;
+    p1.type=1;
+    p1.color=5;
+    if(sizeof(p1)==sizeof(p2))
+    {
+        printf(""SAME"");
+    }
+    else
+    {
+        printf(""DIFFERENT"");
+    }
+    return 0;
+}"
+"Choose a correct statement about C structures.
+A) A structure enables display of folder structure in OS.
+B) A structure enables erasing contents in a folder in OS.
+C) A structure enables to detect and respond to mouse clicks.
+D) All the above"
+"Choose a correct statement about structure and array.?
+A) An array stores only elements of same type. Accessing elements is easy.
+B) A structure is preferred when different type elements are to be combined as a single entity.
+C) An array implementation has performance improvements to structure
+D) All the above"
+"What are the types of data allowed inside a structure.?
+A) int, float, double, long double
+B) char, enum, union
+C) pointers and Same structure type members
+D) All the above"
+"#include <stdio.h>
+
+struct Student {
+	int id;
+	char name[50];
+	float marks;
+};
+
+int main() {
+	struct Student s;
+    
+	printf(""Enter student ID: "");
+	scanf(""%d"", &s.id);
+    
+	printf(""Enter student name: "");
+	scanf(""%s"", s.name);
+    
+	printf(""Enter student marks: "");
+	scanf(""%f"", &s.marks);
+    
+	printf(""\nStudent Information:\n"");
+	printf(""ID: %d\n"", s.id);
+	printf(""Name: %s\n"", s.name);
+	printf(""Marks: %.2f\n"", s.marks);
+    
+	return 0;
+}"
+"
+#include <stdio.h>
+
+struct Point {
+	int x;
+	int y;
+};
+
+int main() {
+	struct Point p;
+
+	printf(""Enter x-coordinate: "");
+	scanf(""%d"", &p.x);
+
+	printf(""Enter y-coordinate: "");
+	scanf(""%d"", &p.y);
+
+	printf(""\nCoordinates entered: (%d, %d)\n"", p.x, p.y);
+
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Rectangle {
+	int length;
+	int width;
+};
+
+int calculateArea(struct Rectangle rect) {
+	return rect.length * rect.width;
+}
+
+int main() {
+	struct Rectangle r;
+    
+	printf(""Enter length: "");
+	scanf(""%d"", &r.length);
+    
+	printf(""Enter width: "");
+	scanf(""%d"", &r.width);
+    
+	int area = calculateArea(r);
+	printf(""\nArea of the rectangle: %d\n"", area);
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Employee {
+	char name[50];
+	int age;
+	float salary;
+};
+
+void displayEmployee(struct Employee emp) {
+	printf(""Name: %s\n"", emp.name);
+	printf(""Age: %d\n"", emp.age);
+	printf(""Salary: %.2f\n"", emp.salary);
+}
+
+int main() {
+	struct Employee e;
+    
+	printf(""Enter employee name: "");
+	scanf(""%s"", e.name);
+    
+	printf(""Enter employee age: "");
+	scanf(""%d"", &e.age);
+    
+	printf(""Enter employee salary: "");
+	scanf(""%f"", &e.salary);
+    
+	printf(""\nEmployee Information:\n"");
+	displayEmployee(e);
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Time {
+	int hours;
+	int minutes;
+	int seconds;
+};
+
+void displayTime(struct Time t) {
+	printf(""Time: %02d:%02d:%02d\n"", t.hours, t.minutes, t.seconds);
+}
+
+int main() {
+	struct Time currentTime;
+    
+	printf(""Enter hours: "");
+	scanf(""%d"", &currentTime.hours);
+    
+	printf(""Enter minutes: "");
+	scanf(""%d"", &currentTime.minutes);
+    
+	printf(""Enter seconds: "");
+	scanf(""%d"", &currentTime.seconds);
+    
+	printf(""\nCurrent Time:\n"");
+	displayTime(currentTime);
+    
+	return 0;
+}
+
+}"
+"#include <stdio.h>
+
+struct Book {
+	char title[100];
+	char author[100];
+	int year;
+};
+
+void displayBook(struct Book b) {
+	printf(""Title: %s\n"", b.title);
+	printf(""Author: %s\n"", b.author);
+	printf(""Year: %d\n"", b.year);
+}
+
+int main() {
+	struct Book myBook;
+    
+	printf(""Enter book title: "");
+	scanf(""%s"", myBook.title);
+    
+	printf(""Enter book author: "");
+	scanf(""%s"", myBook.author);
+    
+	printf(""Enter publication year: "");
+	scanf(""%d"", &myBook.year);
+    
+	printf(""\nBook Information:\n"");
+	displayBook(myBook);
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Point {
+	int x;
+	int y;
+};
+
+void displayPoint(struct Point p) {
+	printf(""Coordinates: (%d, %d)\n"", p.x, p.y);
+}
+
+int main() {
+	struct Point myPoint;
+    
+	printf(""Enter x-coordinate: "");
+	scanf(""%d"", &myPoint.x);
+    
+	printf(""Enter y-coordinate: "");
+	scanf(""%d"", &myPoint.y);
+    
+	printf(""\nPoint Information:\n"");
+	displayPoint(myPoint);
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Rectangle {
+	int length;
+	int width;
+};
+
+int calculateArea(struct Rectangle rect) {
+	return rect.length * rect.width;
+}
+
+int calculatePerimeter(struct Rectangle rect) {
+	return 2 * (rect.length + rect.width);
+}
+
+int main() {
+	struct Rectangle myRectangle;
+    
+	printf(""Enter length: "");
+	scanf(""%d"", &myRectangle.length);
+    
+	printf(""Enter width: "");
+	scanf(""%d"", &myRectangle.width);
+    
+	printf(""\nRectangle Information:\n"");
+	printf(""Area: %d\n"", calculateArea(myRectangle));
+	printf(""Perimeter: %d\n"", calculatePerimeter(myRectangle));
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Student {
+	char name[100];
+	int age;
+	float gpa;
+};
+
+void displayStudent(struct Student s) {
+	printf(""Name: %s\n"", s.name);
+	printf(""Age: %d\n"", s.age);
+	printf(""GPA: %.2f\n"", s.gpa);
+}
+
+int main() {
+	struct Student myStudent;
+    
+	printf(""Enter student name: "");
+	scanf(""%s"", myStudent.name);
+    
+	printf(""Enter student age: "");
+	scanf(""%d"", &myStudent.age);
+    
+	printf(""Enter student GPA: "");
+	scanf(""%f"", &myStudent.gpa);
+    
+	printf(""\nStudent Information:\n"");
+	displayStudent(myStudent);
+    
+	return 0;
+}"
+"#include <stdio.h>
+
+struct Car {
+	char make[100];
+	char model[100];
+	int year;
+};
+
+void displayCar(struct Car c) {
+	printf(""Make: %s\n"", c.make);
+	printf(""Model: %s\n"", c.model);
+	printf(""Year: %d\n"", c.year);
+}
+
+int main() {
+	struct Car myCar;
+    
+	printf(""Enter car make: "");
+	scanf(""%s"", myCar.make);
+    
+	printf(""Enter car model: "");
+	scanf(""%s"", myCar.model);
+    
+	printf(""Enter car year: "");
+	scanf(""%d"", &myCar.year);
+    
+	printf(""\nCar Information:\n"");
+	displayCar(myCar);
+    
+	return 0;
+}"
